@@ -1,0 +1,875 @@
+/* Basic Reset & Body Styles */
+html {
+    scroll-padding-top: 110px; /* Set this to your header height */
+}
+:root {
+    --text-color: #000;
+    --background-color: #fff;
+    --button-bg: #000;
+    --button-text: #fff;
+    --border-color: #000;
+    --font-primary: 'Roboto', sans-serif;
+    --font-display: 'Playfair Display', serif; /* For headings like SHIVYORD, ALINA, MY PHILOSOPHY */
+    --font-secondary: 'Montserrat', sans-serif; /* For general text, skills, projects */
+}
+
+body {
+    font-family: var(--font-secondary);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll from elements sticking out */
+    padding-top: 110px; /* Adjust this value to match your header height */
+    justify-content: space-around;
+}
+
+
+/* General Link & Button Styling */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* Utility Classes */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.dot-underline {
+    font-size: 0.8em; /* Adjust as needed */
+    vertical-align: middle;
+    letter-spacing: -2px; /* For the "..." effect */
+}
+
+.dot-underline::before {
+    content: ".........................."; /* Adjust dots as needed */
+    display: inline-block;
+    overflow: hidden;
+    width: 2em; /* Control dot length */
+    vertical-align: middle;
+}
+
+.dot-underline::after {
+    content: ".........................."; /* Adjust dots as needed */
+    display: inline-block;
+    overflow: hidden;
+    width: 2em; /* Control dot length */
+    vertical-align: middle;
+}
+
+/* Header Section */
+.header-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start; /* Align HI HI HI to top left, nav to top right */
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+    background-color: var(--background-color);
+}
+
+.box {
+  height: 60px;
+  width: 60px;
+  border: 1px solid black;
+  background-color: black;
+  position: relative;
+}
+
+.for-hire{
+    font-family: "theGoodMonolith", sans-serif;
+    font-size: large;
+    color: #ffffff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(315deg);
+}
+
+.header-top-left .hi-hi-hi {
+    width: 80px; /* Adjust size */
+    height: auto;
+    /* You'd need to create this image or use CSS to draw it */
+}
+
+.RESUME{
+    font-family: 'Arsenica Trial', sans-serif;
+    font-size: 1.5em; /* Adjust size */
+    font-weight: 700;
+}
+
+.lead{
+    font-family: 'Arsenica Trial', sans-serif;
+    color: #ffffff;
+}
+.text-light {
+    color: #ffffff; /* Adjust as needed */
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;  
+    justify-content: space-between;  
+}
+.header-row{width: -webkit-fill-available;}
+    
+
+/* Add this to style.css */
+.header-top-row {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Adjust spacing as needed */
+    margin-bottom: 12px; /* Space below the row */
+    justify-content: space-between;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.nav-bar {
+    display: flex;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    justify-content: space-evenly;
+}
+
+.nav-item {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1em;
+    padding-bottom: 5px; /* For the underline effect */
+    position: relative;
+    border-bottom: 2px solid transparent; /* Placeholder for hover effect */
+}
+
+.nav-item:hover {
+    border-bottom-color: var(--border-color);
+    color: rgb(75, 75, 75);
+    text-decoration: none;
+}
+
+.i-am-web-dev {
+    font-family: var(--font-primary);
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /*padding: 50px 40px 0px 40px;*/
+    border-bottom: 2px solid var(--border-color);
+    position: relative;
+    overflow: hidden; /* To contain elements that stick out slightly */
+}
+
+.hero-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 100px; /* Adjust based on your design */
+    box-sizing: border-box;
+}
+
+.shivyord-name, .alina-name {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    font-family: var(--font-display);
+    font-size: 5em; /* Adjust for size */
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.shivyord-name {
+    top: -50px; /* Adjust position */
+    left: -20px; /* Adjust position */
+    z-index: 1;
+}
+
+.alina-name {
+    top: -10px; /* Adjust position */
+    left: 200px; /* Adjust position relative to shivyord */
+    z-index: 1;
+}
+
+.shivyord-arrow, .alina-arrow {
+    position: absolute;
+    width: 80px; /* Adjust arrow size */
+    height: auto;
+}
+
+.shivyord-arrow {
+    transform: rotate(180deg); /* Adjust rotation if needed */
+    top: 60px; /* Position relative to shivyord-name div */
+    left: 200px;
+}
+
+.alina-arrow {
+    transform: rotate(0deg); /* Adjust rotation if needed */
+    top: 50px;
+    left: -20px;
+}
+
+.profile-picture {
+    width: 100%; /* Adjust size */
+    height: auto; /* Adjust size */
+    /*object-fit: cover;*/
+    /*border: 2px solid var(--border-color);*/
+    position: relative;
+    z-index: 2; /* Ensure it's above the text/arrows */
+    /*margin-top: 50px;  Push down to clear names */
+    /* margin-left: -50px; Pull left to match design */
+}
+
+.hero-right-image {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mouth-image {
+    width: 100%; /* Adjust size */
+    height: auto;
+    border: 2px solid var(--border-color);
+    /*border-radius: 50%; /* Make it round */
+    background-color: #eee; /* Placeholder for the grey background */
+}
+
+/* About Me Section */
+.about-me-section {
+    padding: 50px 40px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.about-me-heading {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'TheGoodMonolith', sans-serif;                                                
+    font-weight: 700;
+    font-size: 1.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.about-me-heading .text {
+    white-space: nowrap;
+}
+
+.about-me-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    align-items: stretch; /* Ensures equal height columns */
+}
+
+.about-text-block {
+    border: 2px solid var(--border-color);
+    padding: 30px 30px;
+    position: relative;
+    width: 100%; /* Adjust width */
+    font-weight: 800;
+    align-content: center;    
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside */
+    justify-content: center;
+}
+
+.about-text-block-text {
+    font-family: "TheGoodMonolith", sans-serif;
+    font-size: 1.2em;
+    position: relative;
+    /*max-width: 320px;*/
+    width: 100%; /* Adjust width */
+    font-weight: 800;
+    align-content: center;    
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.my-philosophy {
+    flex: 1;
+    font-family: var(--font-display);
+    position: relative;
+    /*right: -50px;  Push it right slightly as per design */
+    /*top: 0px;  Adjust position */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.my-philosophy h2 {
+    font-size: 2.5em; /* Adjust size */
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.step-text{
+    justify-content: space-around;
+}
+
+.and-text{
+    font-family: "Arsenica Trial", sans-serif;
+    font-size: 2.5em; /* Adjust size */
+}
+my-text{
+    font-family: "Arsenica Trial", sans-serif;
+    font-size: 2.5em; /* Adjust size */
+}
+
+.my-philosophy .philosophy-bold {
+    font-weight: 400; /* Regular weight for 'PHILOSOPHY' */
+    font-family: "TheGoodMonolith", sans-serif;
+}
+
+.philosophy-diagram {
+    position: relative;
+    padding-top: 50px;
+}
+
+.philosophy-diagram .step {
+    display: flex;
+    align-items: center;
+    font-family: "TheGoodMonolith", sans-serif;
+    font-size: 1.5em;
+    position: relative;
+    font-weight: 1000;
+}
+
+.philosophy-diagram .step .arrow-philo {
+    width: 60px; /* Adjust arrow size */
+    height: auto;
+    position: absolute;
+}
+
+.philosophy-diagram .step:nth-child(1) .arrow-philo {
+    top: -5px;
+    left: 120px; /* Position next to "Clean Code" */
+    transform: rotate(15deg); /* Adjust rotation */
+}
+
+.philosophy-diagram .step:nth-child(2) .arrow-philo {
+    top: 35px;
+    left: 170px; /* Position next to "Creative design" */
+    transform: rotate(-15deg); /* Adjust rotation */
+}
+
+.process-box {
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    /*width: 300px;  Adjust size */
+    margin-top: 50px;
+    background-color: var(--background-color);
+}
+
+.process-text {
+    font-family: var(--font-display);
+    font-size: 2em; /* Adjust size */
+    font-weight: 700;
+    position: absolute;
+    top: -30px; /* Pull above the box */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--background-color);
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-family: "Arsenica Trial", sans-serif;
+    font-size: normal;
+    gap: 0px;
+    align-items: center;
+    font-weight: 600;
+}
+
+
+/* Skills Section */
+.skills-section {
+    padding: 50px 40px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.skills-heading {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'TheGoodMonolith', sans-serif;
+    font-weight: 700;
+    font-size: 1.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skills-heading .text {
+    white-space: nowrap;
+}
+
+.skills-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.soft-skills, .hard-skills {
+    flex: 1;
+    border: 2px solid var(--border-color);
+    padding: 30px;
+    position: relative;
+}
+
+.soft-skills h3, .hard-skills h3 {
+    font-family: var(--font-display);
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.skills-bold{
+    font-family: "TheGoodMonolith", sans-serif;
+    font-weight: 1000; /* Bold weight for 'SOFT SKILLS' and 'HARD SKILLS' */
+}
+
+.soft-skills-list {
+    display: flex;
+    gap: 14px; /* Adjust spacing between columns as needed */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.soft-skills-list ul {
+    flex: 1;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.soft-skills ul, .hard-skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: "TheGoodMonolith", sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.soft-skills-list ul li::before,
+.hard-skills ul li::before {
+    content: '';
+    display: inline-block;
+    width: 0.2em;
+    height: 0.2em;
+    margin-right: 0.6em;
+    border-radius: 50%;
+    background: var(--border-color); /* Or any color you prefer */
+    vertical-align: middle;
+}
+
+.hard-skills .hard-skills-arrow {
+    position: absolute;
+    width: 60px; /* Adjust size */
+    height: auto;
+    top: 50px; /* Adjust position */
+    right: 20px; /* Adjust position */
+    transform: rotate(90deg); /* Adjust rotation */
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 50px 40px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.projects-heading {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'TheGoodMonolith', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.projects-heading .text {
+    white-space: nowrap;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    border: 2px solid var(--border-color);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--font-secondary);
+    font-size: 0.9em;
+}
+
+.project-card p {
+    margin-bottom: 20px;
+}
+
+.open-button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 10px 20px;
+    border: 1px solid var(--button-bg);
+    font-family: var(--font-primary);
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.open-button:hover {
+    background-color: var(--background-color);
+    color: var(--button-bg);
+    border: 1px solid var(--button-bg);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 40px;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'TheGoodMonolith', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-heading .text {
+    white-space: nowrap;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.contact-button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 10px 30px;
+    border: 2px solid var(--button-bg);
+    font-family: var(--font-primary);
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-button:hover {
+    background-color: var(--background-color);
+    color: var(--button-bg);
+    text-decoration: none;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    border: 2px solid var(--border-color);
+    padding: 15px;
+    font-family: var(--font-secondary);
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
+}
+
+.send-button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 15px 40px;
+    border: 2px solid var(--button-bg);
+    font-family: var(--font-primary);
+    font-weight: 700;
+    align-self: flex-end; /* Align to the right */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.send-button:hover {
+    background-color: var(--background-color);
+    color: var(--button-bg);
+}
+
+/* Simple responsiveness for smaller screens (adjust breakpoints as needed) */
+@media (max-width: 1024px) {
+    /*.hero-content {
+        padding-left: 50px;
+    }*/
+    /*.profile-picture {
+        width: 250px;
+        height: 250px;
+    }*/
+    .shivyord-name, .alina-name {
+        font-size: 4em;
+    }
+ 
+
+    .about-text-block, .my-philosophy, .soft-skills, .hard-skills {
+        width: auto;
+        left: auto;
+        right: auto;
+        top: auto;
+    }
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-me-section, .skills-section, .projects-section, .contact-section {
+        padding: 20px 20px;
+    }
+    .nav-bar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+    }
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-content {
+        padding-left: 0;
+        align-items: center;
+    }
+    .shivyord-name, .alina-name {
+        position: static;
+        font-size: 3em;
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .shivyord-arrow, .alina-arrow {
+        position: static;
+        transform: none;
+        margin-top: 5px;
+    }
+    .profile-picture {
+        margin-top: 20px;
+        width: 200px;
+        height: 200px;
+    }
+    .hero-right-image {
+        position: static;
+        transform: none;
+        margin-top: 30px;
+    }
+    .my-philosophy {
+        text-align: center;
+    }
+    .philosophy-diagram .step {
+        justify-content: center;
+    }
+    .philosophy-diagram .step .arrow-philo {
+        position: static;
+        margin-left: 10px;
+        transform: none !important; /* Override specific rotations */
+    }
+    .process-box {
+        margin: 50px auto 0;
+    }
+    .arrow-process-1, .arrow-process-2, .arrow-process-3, .arrow-process-4 {
+        display: none; /* Hide complex arrows on small screens */
+    }
+    .hard-skills .hard-skills-arrow {
+        display: none;
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-button {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .send-button {
+        align-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        gap: 5px;
+        font-size: 0.9em;
+    }
+    .shivyord-name, .alina-name {
+        font-size: 2.5em;
+    }
+    .mouth-image {
+        width: 150px;
+    }
+    .about-me-heading, .skills-heading, .projects-heading, .contact-heading {
+        font-size: 1.2em;
+    }
+    .my-philosophy h2 {
+        font-size: 2em;
+    }
+    .process-text {
+        font-size: 1.5em;
+    }
+    .soft-skills h3, .hard-skills h3 {
+        font-size: 1.8em;
+    }
+}
+
+.hi-hi-hi{
+    height: 60px; /* Adjust size */
+}
+
+i-am{
+    height: 30px; /* Adjust size */
+}
+
+/* Стилі для контейнера блоку. 
+   Використовуємо унікальні класи, щоб не впливати на інші об'єкти.
+*/
+.draggable-text-section__wrapper {
+    width: 100vw; /* Ширина на весь екран */
+    height: 100vh; /* Висота на весь екран */
+    background-position: center; /* Центрує зображення */
+    flex-direction: column;
+    align-items: center; /* Центрує елементи по вертикалі */
+    justify-content: center; /* Центрує елементи по горизонталі */
+    overflow: hidden; /* Приховуємо будь-який вміст, що виходить за межі блоку */
+    position: relative; /* Позиціонування для абсолютно позиціонованого тексту */
+    min-height: 300px; /* Мінімальна висота для блоку */
+}
+
+/* Стилі для фонового зображення, вставленого через HTML */
+.draggable-text-section__background-image {
+    position: absolute; /* Абсолютне позиціонування */
+    top: 0;
+    left: 0;
+    width: 100%; /* Розтягуємо на всю ширину батьківського елемента */
+    height: 100%; /* Розтягуємо на всю висоту батьківського елемента */
+    object-fit: cover; /* Аналог background-size: cover; для <img> */
+    z-index: -1; /* Відправляємо зображення на задній план, щоб текст був зверху */
+}
+
+/* Стилі для контейнера самого тексту, що прокручується.
+   Знову ж таки, унікальні класи.
+*/
+.draggable-text-section__container {
+    width: 100%; /* Обмежте ширину контейнера тексту, щоб він не займав весь екран */
+    overflow-x: hidden; /* Приховуємо стандартну горизонтальну прокрутку контейнера */
+    white-space: nowrap; /* Забороняємо переносити текст на новий рядок */
+    cursor: grab; /* Змінюємо курсор на "руку" для перетягування */
+    user-select: none; /* Забороняємо виділення тексту при перетягуванні */
+    -webkit-user-select: none; /* Для WebKit браузерів */
+    -moz-user-select: none; /* Для Mozilla Firefox */
+    -ms-user-select: none; /* Для Microsoft Edge/IE */
+    z-index: 1;
+}
+
+/* Курсор при активному перетягуванні */
+.draggable-text-section__container:active {
+    cursor: grabbing; /* Змінюємо курсор на "схоплену руку" при перетягуванні */
+}
+
+/* Стилі для самого тексту.
+   Використовуємо унікальні класи.
+*/
+.draggable-text-section__text {
+    font-family: 'Arsenica Trial', sans-serif;
+    display: inline-block; /* Дозволяє тексту залишатися в одному рядку */
+    font-size: 5em; /* Великий розмір тексту */
+    color: rgb(255, 255, 255); /* Колір тексту */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тінь для кращої читабельності */
+    padding-top: 20px ; 
+    padding-bottom: 20px ; 
+    padding-left: 5%;
+}
+
+/* Стилі для нерухомого напису */
+.draggable-text-section__static-caption {
+    font-family: 'Arsenica Trial', sans-serif;
+    color: #cccccc; /* Світло-сірий колір, щоб був помітний */
+    font-size: 1.5em; /* Розмір шрифту */
+    text-align: left; /* Центруємо текст */
+    margin-top: 10px; /* Відступ зверху від рухомого тексту */
+    max-width: 80%; /* Обмеження ширини напису */
+    z-index: 1; /* Переконаємось, що напис над фоном */
+    padding-left: 5%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Тінь для кращої читабельності */
+}
+
+/* Медіа-запити для адаптивності тексту на менших екранах.
+   Текст буде меншим, щоб краще поміщатися.
+*/
+@media (max-width: 768px) {
+    .draggable-text-section__text {
+        font-size: 3em; /* Зменшуємо розмір шрифту на менших екранах */
+    }
+}
+
+@media (max-width: 480px) {
+    .draggable-text-section__text {
+        font-size: 2em; /* Ще менший шрифт для мобільних телефонів */
+    }
+}
