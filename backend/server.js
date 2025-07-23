@@ -7,7 +7,7 @@ const app = express();
 const PORT = 3000;
 
 // Serve static files from the frontend folder
-app.use'/frontend',(express.static(path.join(__dirname, '..', 'frontend')));
+app.use('/frontend',express.static(path.join(__dirname, '..', 'frontend')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
