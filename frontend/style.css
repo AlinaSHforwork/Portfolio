@@ -538,8 +538,9 @@ my-text{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-family: var(--font-secondary);
-    font-size: 0.9em;
+    font-family:"TheGoodMonolith", sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
 }
 
 .project-card p {
